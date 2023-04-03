@@ -1,2 +1,3 @@
 # labrakurssi_tyo2
-Discord-botti joka generoi valmiin tekoälyn ja annettujen sanojen avulla kuvia.
+
+Discord-botti joka generoi OpenAI:n tekoälyn avulla kuvia. Syötteeksi voi antaa niin monta sanaa kuin haluaa, tekoäly ei ymmärrä suomea.
