@@ -9,6 +9,7 @@ Discord-botti joka generoi OpenAI:n tekoälyn avulla kuvia. Syötteeksi voi anta
 4. Aja bot.py tiedosto ja botti on käytössä.
 
 --------------------!HUOM!--------------------
+
 Nämä .env tiedoston ympäristömuuttujat ovat yksityisiä
 
 
