@@ -14,6 +14,5 @@ def create(prompt):
         size = "512x512"
     )
     image_url = response["data"][0]["url"]
-    print(image_url)
+    return (image_url)
 
-create("cat")
