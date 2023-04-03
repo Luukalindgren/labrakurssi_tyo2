@@ -3,6 +3,7 @@ import os
 import discord
 from dotenv import load_dotenv
 from discord.ext import commands
+import createPicture
 
 # Load environment variables
 load_dotenv()
@@ -37,7 +38,7 @@ async def sup(ctx):
 async def image(ctx, word1='abstrakt', word2='art'):
     await ctx.send('Generating image with words: ' + word1 + ' and ' + word2)
     #await ctx.send(file=discord.File('image.png'))
-    await ctx.send('Image generator under construction...')
+    await ctx.send(createPicture.create(word1 + ' ' + word2))
 
 
 # Run bot
