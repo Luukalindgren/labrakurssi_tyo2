@@ -48,7 +48,7 @@ async def coinflip(ctx):
     if (flip < 50):
         await ctx.send('Heads')
     elif (flip == 50):
-        await ctx.send('OMG It landed on the side')
+        await ctx.send('OMG it landed on the side (1 in 101 chance)')
     else: await ctx.send('Tails')
 
 # Run bot
