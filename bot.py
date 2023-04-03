@@ -1,9 +1,10 @@
 # Must install discord.py and python-dotenv
 import os
 import discord
-import random
 from dotenv import load_dotenv
 from discord.ext import commands
+import createPicture
+import random
 
 # Load environment variables
 load_dotenv()
