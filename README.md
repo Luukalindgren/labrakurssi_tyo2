@@ -18,3 +18,9 @@ Nämä .env tiedoston ympäristömuuttujat ovat yksityisiä
   - !sup      (Testikomento, joka vain lähettää viestin)
   - !coinflip (Heittää kolikkoa: Heads, Tails and on its side)
   - !image <input>  (Kutsuu OpenAI kuva generaattoria, palauttaa sen luoman kuvan annetun syötteen mukaan)
+
+
+# Esimerkkejä:
+![image](https://user-images.githubusercontent.com/70708962/229514079-d1b7fddb-7f0f-4878-9752-35f486aa08b4.png)
+![image](https://user-images.githubusercontent.com/70708962/229514107-a98c4616-606a-46ca-b618-589c459bc492.png)
+![image](https://user-images.githubusercontent.com/70708962/229514202-4b4a26dc-790e-4264-b2f6-99469f47c569.png)
