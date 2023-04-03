@@ -34,11 +34,11 @@ async def sup(ctx):
     await ctx.send('Biip boop')
 
 # Bot image generator command
-@bot.command(name='image', help='Generates an image with two words "!image <word1> <word2>"')
-async def image(ctx, word1='abstrakt', word2='art'):
-    await ctx.send('Generating image with words: ' + word1 + ' and ' + word2)
+@bot.command(name='image', help='Generates an image with text input "!image <input>"')
+async def image(ctx, words = ""):
+    await ctx.send('Generating image with: ' + words)
     #await ctx.send(file=discord.File('image.png'))
-    await ctx.send(createPicture.create(word1 + ' ' + word2))
+    await ctx.send(createPicture.create(words))
 
 
 # Run bot
