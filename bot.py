@@ -1,3 +1,4 @@
+# Must install discord.py and python-dotenv
 import os
 import discord
 from dotenv import load_dotenv
@@ -27,9 +28,17 @@ async def on_ready():
     print(f'Guild Members:\n - {members}')
 
 # Bot test command
-@bot.command(name='sup')
+@bot.command(name='sup', help='Responds with a message')
 async def sup(ctx):
     await ctx.send('Biip boop')
+
+# Bot image generator command
+@bot.command(name='image', help='Generates an image with two words "!image <word1> <word2>"')
+async def image(ctx, word1='abstrakt', word2='art'):
+    await ctx.send('Generating image with words: ' + word1 + ' and ' + word2)
+    #await ctx.send(file=discord.File('image.png'))
+    await ctx.send('Image generator under construction...')
+
 
 # Run bot
 bot.run(TOKEN)
