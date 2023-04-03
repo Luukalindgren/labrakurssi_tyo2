@@ -1,32 +1,35 @@
 import os
 import discord
 from dotenv import load_dotenv
+from discord.ext import commands
 
+# Load environment variables
 load_dotenv()
 
+# Set environment variables
 TOKEN = os.getenv('DISCORD_TOKEN')
 GUILD = os.getenv('DISCORD_GUILD')
 
-client = discord.Client(intents=discord.Intents.default())
+# All commands must start with '!' prefix
+bot = commands.Bot(command_prefix='!', intents=discord.Intents.all())
 
-@client.event
+# Confirm bot is connected to server
+@bot.event
 async def on_ready():
-    guild = discord.utils.get(client.guilds, name=GUILD)
+    guild = discord.utils.get(bot.guilds, name=GUILD)
 
     print(
-        f'{client.user.name} is connected to:\n' 
+        f'{bot.user.name} is connected to:\n' 
         f'{guild.name} (id: {guild.id})'
     )
     
     members = '\n - '.join([member.name for member in guild.members])
     print(f'Guild Members:\n - {members}')
 
-@client.event
-async def on_message(message):
-    if message.author == client.user:
-        return
+# Bot test command
+@bot.command(name='sup')
+async def sup(ctx):
+    await ctx.send('Biip boop')
 
-
-    await message.channel.send('Biip boop')
-
-client.run(TOKEN)
+# Run bot
+bot.run(TOKEN)
